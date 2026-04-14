@@ -3,8 +3,10 @@ import { TodoContextItems } from "../store/todo-items-store";
 
 const TaskCommandCenter = () => {
   const { addNewItem } = useContext(TodoContextItems);
+  const date = new Date();
+  const today = date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0');
   const [taskName, setTaskName] = useState("");
-  const [dueDate, setDueDate] = useState("");
+  const [dueDate, setDueDate] = useState(today);
   const [priority, setPriority] = useState("Medium");
   const [category, setCategory] = useState("Work");
 
@@ -13,7 +15,7 @@ const TaskCommandCenter = () => {
     if (!taskName.trim()) return;
     addNewItem(taskName, dueDate, priority, category);
     setTaskName("");
-    setDueDate("");
+    setDueDate(today);
   };
 
   return (

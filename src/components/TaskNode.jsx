@@ -20,7 +20,7 @@ const TaskNode = ({ item }) => {
 
       <div className="task-body">
         <div className="task-main">
-          <span className="task-name">{item.name}</span>
+          <span className="task-name">{item.name || item.todoItemName}</span>
           <div className="task-meta">
             <span className="priority-pulse" style={{ background: priorityColor }}></span>
             <span className="priority-text">{item.priority}</span>
@@ -96,6 +96,7 @@ const TaskNode = ({ item }) => {
           font-size: 1.05rem;
           display: block;
           margin-bottom: 0.3rem;
+          color: var(--text-primary);
         }
         .task-meta {
           display: flex;
