@@ -37,12 +37,12 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/zenith-mission-control.git
+   git clone https://github.com/Imtiaz-Ali17314/ZENITH-todo-app-react-project
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd Todo-App-React-Project
+   cd ZENITH-todo-app-react-project
    ```
 
 3. Install dependencies:
